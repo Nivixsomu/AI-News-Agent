@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Powered News Aggregator - Get the latest news, categorized and summarized using AI.">
+    <title>AI News Agent</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- Corrected Stylesheet Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">AI News Agent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trending">Trending</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Breaking News Powered by AI</h1>
+        <p>Stay updated with AI-generated news summaries from around the world.</p>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="container my-4 text-center">
+        <h2>Search for News</h2>
+        <input type="text" id="searchInput" class="form-control mb-3" placeholder="Enter keyword (e.g., AI, Politics, Cricket)">
+        <button id="searchNews" class="btn btn-success">Search</button>
+    </section>
+
+    <!-- Location Selection -->
+    <section class="container my-4 text-center">
+        <h2>Select Your Location</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <select id="state" class="form-select mb-3">
+                    <option value="">Select State</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="city" class="form-select mb-3">
+                    <option value="">Select City</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button id="fetchNews" class="btn btn-primary">Get News</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Categories -->
+    <section id="categories" class="container my-5">
+        <h2 class="text-center">News Categories</h2>
+        <div class="row text-center mt-4">
+            <div class="col-md-3"><div class="card p-3"><h5>Politics</h5></div></div>
+            <div class="col-md-3"><div class="card p-3"><h5>Sports</h5></div></div>
+            <div class="col-md-3"><div class="card p-3"><h5>Technology</h5></div></div>
+            <div class="col-md-3"><div class="card p-3"><h5>Crime</h5></div></div>
+        </div>
+    </section>
+
+    <!-- Trending News -->
+    <section id="trending" class="container my-5">
+        <h2 class="text-center">Trending News</h2>
+        <div class="row mt-4" id="news-container"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 AI News Agent. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
